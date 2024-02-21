@@ -19,7 +19,7 @@ O detalhamento abaixo tem como base a implementação utilizada pela Interface d
 
 ### Glossário
 
-* ISPB: Código de 8 dígitos que identifica uma instituição de pagamento no Sistema de Pagamento Brasileiro (SPB). Como exemplo pode 
+* ISPB: Código de 8 dígitos que identifica uma instituição de pagamento no Sistema de Pagamento Brasileiro (SPB). Como exemplo pode utilizar: "32074986".
 
 ### Endpoints
 
@@ -34,7 +34,7 @@ A API deverá retornar apenas as mensagens PIX em que o `ispb` utilizado no par�
 Quando houver resultados, o `status code` esperado é 200. Quando não houver, o `status code` esperado é 204.
 
 No cabeçalho de resposta deve retornar um cabeçalho `Pull-Next` com a URI que deve ser utilizado para a recuperação das próximas mensagens. Exemplo:
-* `/api/pix/11111111/stream/5oj7tm0jow61`
+* `/api/pix/11111111/stream/5oj7tm0jow61` onde o "5oj7tm0jow61" é o `interationId`.
 
 O PSP irá utilizar essa URI para buscar as próximas mensagens, de forma recursiva até que deseja interromper o processo de leitura.
 
