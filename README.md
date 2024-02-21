@@ -41,6 +41,7 @@ A chamada utilizando esse verbo é importante para sinalizar o recebimento com s
 
 Após interromper o processo de leitura, o PSP só poderá iniciar o processo de coleta novamente utilizando o endpoint `/api/pix/{ispb}/stream/start`.
 
+_____________________________
 
 #### Long Polling
 
@@ -97,7 +98,7 @@ Para facilitar os testes e verificação de conformidade, é importante a implem
 Esse endpoint será utilizado para inserir na base de dados, novas mensagens Pix. A quantidade de mensagens a serem adicionadas será de acordo com o pathParam `number`. As informações das mensagens devem ser geradas de forma aleatória, seguindo o padrão dos dados de exemplo.
 
 
-### Tecnologias
+## Tecnologias
 
 De preferência, se você tiver domínio, esperamos ver o backend em NodeJS ou Django, utilizando PostgreSQL.
 
