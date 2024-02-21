@@ -17,6 +17,10 @@ Você irá construir uma aplicação back-end que será utilizado para coleta de
 O detalhamento abaixo tem como base a implementação utilizada pela Interface de Comunicação do SPI (Banco Central), para prover o Pix.
 
 
+### Glossário
+
+* ISPB: Código de 8 dígitos que identifica uma instituição de pagamento no Sistema de Pagamento Brasileiro (SPB). Como exemplo pode 
+
 ### Endpoints
 
 #### GET `/api/pix/{ispb}/stream/start`
@@ -36,8 +40,12 @@ O PSP irá utilizar essa URI para buscar as próximas mensagens, de forma recurs
 
 Quando desejar interromper o processo de leitura, o PSP irá realizar uma chamada `DELETE` utilizando a URI fornecida no cabeçalho `Pull-Next` da última interação realizada.
 
+#### GET `/api/pix/{ispb}/stream/{interationId}`
+Esse endpoint terá o mesmo comportamento do `stream/start`, com o mesmo retorno de dados e cabeçalhos. Será uma chamada de continuação ao stream iniciado anteriormente.
+
+
 #### DELETE `/api/pix/{ispb}/stream/{interationId}`
-A chamada utilizando esse verbo é importante para sinalizar o recebimento com sucesso das mensagens anteriormente.
+A chamada utilizando esse verbo é importante para sinalizar o recebimento com sucesso das mensagens anteriormente e liberar o stream para outros coletores (se necessário).
 
 Após interromper o processo de leitura, o PSP só poderá iniciar o processo de coleta novamente utilizando o endpoint `/api/pix/{ispb}/stream/start`.
 
