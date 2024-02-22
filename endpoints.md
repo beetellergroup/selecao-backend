@@ -93,4 +93,4 @@ Esse endpoint será utilizado para inserir na base de dados, novas mensagens Pix
 
 ### Exemplos
 
-Os exemplos de requisição, cabeçalhos e resposta podem ser [visualizados aqui](blob/main/examples.md).
+Os exemplos de requisição, cabeçalhos e resposta podem ser [visualizados aqui](examples.md).
