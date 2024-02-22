@@ -87,6 +87,10 @@ Os dados esperados no endpoint de consulta (consulta de mensagens Pix) devem ser
 
 Para facilitar os testes e verificação de conformidade, é importante a implementação de outros endpoints para simular a entrada de novas mensagens Pix.
 
-#### POST `/api/util/msgs/{number}`
-Esse endpoint será utilizado para inserir na base de dados, novas mensagens Pix. A quantidade de mensagens a serem adicionadas será de acordo com o pathParam `number`. As informações das mensagens devem ser geradas de forma aleatória, seguindo o padrão dos dados de exemplo.
+#### POST `/api/util/msgs/{ispb}/{number}`
+Esse endpoint será utilizado para inserir na base de dados, novas mensagens Pix. A quantidade de mensagens a serem adicionadas será de acordo com o pathParam `number`. As informações das mensagens devem ser geradas de forma aleatória, seguindo o padrão dos dados de exemplo. O parâmetro `ispb` deve ser utilizado para inserir as mensagens Pix indicando essa instituição como "Recebedora".
 
+
+### Exemplos
+
+Os exemplos de requisição, cabeçalhos e resposta podem ser [visualizados aqui](blob/main/examples.md).
