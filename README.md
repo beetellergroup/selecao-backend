@@ -19,7 +19,7 @@ O detalhamento abaixo tem como base a implementação utilizada pela Interface d
 
 ### Especificação
 
-A especificação da aplicação pode ser [encontrada aqui.](blob/main/endpoints.md)
+A especificação da aplicação pode ser [encontrada aqui.](endpoints.md)
 
 ## Tecnologias
 
