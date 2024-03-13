@@ -23,6 +23,8 @@ No cabeçalho de resposta deve retornar um cabeçalho `Pull-Next` com a URI que 
 
 O PSP irá utilizar essa URI para buscar as próximas mensagens, de forma recursiva até que deseja interromper o processo de leitura.
 
+É necessário garantir que as mensagens já retornadas no endpoint, não sejam retornadas em outras próximas chamadas ou chamadas simultâneas. 
+
 Quando desejar interromper o processo de leitura, o PSP irá realizar uma chamada `DELETE` utilizando a URI fornecida no cabeçalho `Pull-Next` da última interação realizada.
 
 #### GET `/api/pix/{ispb}/stream/{interationId}`
