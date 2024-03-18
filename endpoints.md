@@ -51,7 +51,7 @@ em formato multipart.
 
 A API deverá permitir o consumo de forma paralela das mensagens por vários "coletores" atráves do GET `/api/pix/{ispb}/stream/start`. Dessa forma, cada requisição ao recurso stream/start pode fazer a API criar um “stream” de leitura.
 
-A API deverá permitir no máximo 6 coletores simultâneamente. Quando atingir o limite, as requisições ao recurso stream/start devem retornar o erro com `status code` 429. O stream é considerado finalizado quando ocorre a chamada com DELETE ao recurso, conforme detalhado anteriormente.
+A API deverá permitir no máximo 6 coletores simultâneamente, para cada ISPB. Quando atingir o limite, as requisições ao recurso stream/start devem retornar o erro com `status code` 429. O stream é considerado finalizado quando ocorre a chamada com DELETE ao recurso, conforme detalhado anteriormente.
 
 A API deverá tratar e garantir que as mensagens não apareçam em mais de um stream, para evitar transações duplicadas. 
 
