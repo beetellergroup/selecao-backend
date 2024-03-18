@@ -30,7 +30,7 @@ Data
     "pagador": {
         "nome": "Marcos José",
         "cpfCnpj": "98716278190",
-        "ispb": "32074986",
+        "ispb": "00000000",
         "agencia": "0001",
         "contaTransacional": "1231231",
         "tipoConta": "CACC"
@@ -38,7 +38,7 @@ Data
     "recebedor": {
         "nome": "Flavio José",
         "cpfCnpj": "77615678291",
-        "ispb": "00000000",
+        "ispb": "32074986",
         "agencia": "0361",
         "contaTransacional": "1210098",
         "tipoConta": "SVGS"
@@ -52,7 +52,7 @@ Data
 ## GET `/api/pix/{ispb}/stream/start` + `Accept: "multipart/json"`
 
 ### Request
-URL: `/api/pix/32074986/stream/start`
+URL: `/api/pix/00000000/stream/start`
 
 
 Headers
@@ -65,7 +65,7 @@ Accept: "multipart/json"
 
 Headers
 ```
-Pull-Next: "/api/pix/32074986/stream/17myxj5wskjf"
+Pull-Next: "/api/pix/00000000/stream/17myxj5wskjf"
 Content-Type: "application/json"
 ...
 ```
@@ -174,7 +174,7 @@ Data
     "pagador": {
         "nome": "Marcos José",
         "cpfCnpj": "98716278190",
-        "ispb": "32074986",
+        "ispb": "00000000",
         "agencia": "0001",
         "contaTransacional": "1231231",
         "tipoConta": "CACC"
@@ -182,7 +182,7 @@ Data
     "recebedor": {
         "nome": "Flavio José",
         "cpfCnpj": "77615678291",
-        "ispb": "00000000",
+        "ispb": "32074986",
         "agencia": "0361",
         "contaTransacional": "1210098",
         "tipoConta": "SVGS"
@@ -196,7 +196,7 @@ Data
 ## GET `/api/pix/{ispb}/stream/{interationId}` + `Accept: "multipart/json"`
 
 ### Request
-URL: `/api/pix/32074986/stream/17myxj5wskjf`
+URL: `/api/pix/00000000/stream/17myxj5wskjf`
 
 
 Headers
@@ -209,7 +209,7 @@ Accept: "multipart/json"
 
 Headers
 ```
-Pull-Next: "/api/pix/32074986/stream/9kp6a6l7c2ii"
+Pull-Next: "/api/pix/00000000/stream/9kp6a6l7c2ii"
 Content-Type: "application/json"
 ...
 ```
